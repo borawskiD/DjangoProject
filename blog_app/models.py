@@ -18,7 +18,6 @@ class Post(models.Model):
     last_modified = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField("Category", related_name="posts")
     image = models.ImageField(upload_to='post_images/', blank=True, null=True)
-
     class Meta:
         verbose_name_plural = "posty"
         verbose_name = "post"

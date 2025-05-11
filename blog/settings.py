@@ -22,15 +22,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!(ay@@3_9qvfkz9z_zgymsc$8@3#d7bru$ht2%01bs!(&v9^%u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-##
+ALLOWED_HOSTS = ['*']
+###
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "static"]
 # Application definition
-
+#
 INSTALLED_APPS = [
     'sorl.thumbnail',
     'blog_app.apps.BlogAppConfig',
@@ -67,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'blog_app.context_processors.categories',
             ],
         },
     },
@@ -74,7 +76,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'blog.wsgi.application'
 
-
+##
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
