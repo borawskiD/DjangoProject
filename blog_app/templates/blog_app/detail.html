@@ -3,11 +3,17 @@
 {% block page_title %}
     <h2>{{ post.title }}</h2>
 {% endblock page_title %}
+{% load thumbnail %}
 
 {% block page_content %}
     <small>
         <!-- ... -->
     </small>
+    {% if post.image %}
+    {% thumbnail post.image "1200x1000" as im %}
+        <img src="{{ im.url }}" class="img-fluid" alt="{{ post.title }}">
+    {% endthumbnail %}
+    {% endif %}
     <p>{{ post.body | linebreaks }}</p>
 
     <h3>Leave a comment:</h3>

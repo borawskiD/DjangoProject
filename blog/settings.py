@@ -25,11 +25,14 @@ SECRET_KEY = 'django-insecure-!(ay@@3_9qvfkz9z_zgymsc$8@3#d7bru$ht2%01bs!(&v9^%u
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+##
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Application definition
 
 INSTALLED_APPS = [
+    'sorl.thumbnail',
     'blog_app.apps.BlogAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
