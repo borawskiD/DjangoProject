@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-!(ay@@3_9qvfkz9z_zgymsc$8@3#d7bru$ht2%01bs!(&v9^%u
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://django-blog-651901597339.europe-west1.run.app',
+    'django-blog-651901597339.europe-west1.run.app',
     'localhost'
 ]
 
