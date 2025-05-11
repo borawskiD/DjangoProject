@@ -15,4 +15,5 @@ COPY . .
 
 # Zbierz statyczne pliki (jeśli używasz)
 # Domyślne polecenie do uruchomienia Django (z gunicorn)
+RUN python manage.py collectstatic --noinput
 CMD ["gunicorn", "blog.wsgi:application", "--bind", "0.0.0.0:8080"]

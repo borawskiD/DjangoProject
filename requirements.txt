@@ -2,5 +2,6 @@ asgiref==3.8.1
 Django==5.2.1
 pillow==11.2.1
 gunicorn
+whitenoise
 sorl-thumbnail==12.11.0
 sqlparse==0.5.3
